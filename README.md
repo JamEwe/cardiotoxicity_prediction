@@ -32,6 +32,6 @@ To run app place rf.pkl and graph_model_128.pt files in the App folder.
 | GCNN + RFR |	0.377588 |	0.292669 |	0.540989 |	0.673248 |
 
 ## App
-
+[![app_video](https://raw.githubusercontent.com/JamEwe/cardiotoxicity_prediction/master/images/app.png)](https://www.youtube.com/watch?v=AfpmEKPNqfM "Cardiotoxicity prediction app")
 
 
