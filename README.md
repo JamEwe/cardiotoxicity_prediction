@@ -9,7 +9,7 @@ Our machine learning model predicts cardiotoxicity of compound and shows what is
 
 ## Models
 
-All model avaliable at:
+All model avaliable at: https://drive.google.com/file/d/1K7_SDzy-mRb6c9E-xTgHL7x_bMf06ftT/view?usp=sharing
 
 To run app place rf.pkl and graph_model_128.pt files in the App folder.
 
