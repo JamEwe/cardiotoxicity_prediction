@@ -38,7 +38,7 @@ with st.expander("About"):
 
          Our machine learning model predicts cardiotoxicity of compound and shows what is contributing to it (explanation). It returns pIC50 value in moles. The result is calculated by a 
          Convolutional Graph Neural Network (based on molecular graph) and by a Random Forest Regressor (based on MACCs fingerprint) and then averaged (picture below).
-         The input to the application can be a single SMILES or a CSV file containing a "smiles" column. The correctness of both a single SMILE and the SMILE list is checked. For a single SMILES, 
+         The input to the application can be a single SMILES or a CSV file containing a "smiles" column. The correctness of both a single SMILES and the SMILES list is checked. For a single SMILES, 
          the application also returns an explanation and classification (a molecule is considered toxic if pIC50 >= 5). For the CSV file it is possible to download the results in CSV format.
 
 
