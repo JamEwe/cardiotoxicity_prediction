@@ -7,12 +7,41 @@ Drug candidates often cause a blockage of the potassium ion channel of the human
 
 Our machine learning model predicts cardiotoxicity of compound and shows what is contributing to it (explanation). It returns pIC50 value in moles. We checked and compared various approaches (based on molecular graph and MACCs fingerprint) and models. Model interpretation has been checked by LIME and Grad-CAM.
 
-## Models
+## Files and dirs description
 
-All model avaliable at: https://drive.google.com/file/d/1K7_SDzy-mRb6c9E-xTgHL7x_bMf06ftT/view?usp=sharing
+- *data*:
+  - *cardiotoxicity_hERG_MACCSFP_ready_set.csv* - raw file with fingerprints and targets 
+  - *hERG_all_human_data_filtered_11504cmds.sdf* - raw  file  with  molecules
+  - *cardio_processed.csv, smiles_processed.csv*, *smiles_processed_target.csv* - processed data (with fingerprints, with smiles, with smiles and targets)
+  - *train.csv*, *test.csv*, *valid.csv* - split data with fingerprints 
+  - *train_smiles.csv*, *test_smiles.csv*, *valid.csv* - split data with SMILES
+- *images* - used images
+- *runs* - logs from training
+- *App*:
+  - *app.py* - main app file
+  - *defs_graph.py* - file with GCNN methods
+  - *defs_rf.py* - file with Random Forest methods
+  - *example_smiles.csv* - test file with 100 smiles
+  - *lime_explainer* - LIME explainer object
+- *cardiotoxicity_data_analyse.ipynb* - notebook with data analyse and preprocessing
+- *data_split.ipynb* - notebook with proposed data splits
+- *basic_models.ipynb* - notebook with simple and stacked models 
+- *FCNN.ipynb* - notebook for Fully Connected Neural Network
+- *graph_net.ipynb* - notebook for Graph Convolutional Neural Network
+- *interpretability.ipynb* - notebook with LIME interpetability for Random Forest Regressor and Grad-CAM for GCNN + results for averaged predictions from both models
+- *environment.yml*, *requirements.txt* - files for conda environment 
 
-To run app place rf.pkl and graph_model_128.pt files in the App folder.
 
+## Usage
+
+All models avaliable at: https://drive.google.com/file/d/1K7_SDzy-mRb6c9E-xTgHL7x_bMf06ftT/view?usp=sharing
+
+The  experiments  can  be  recreated  using  shared  notebooks  in  the  conda  environment  (*environment.yml*  or  *requirements.txt*). 
+
+To run the application it is necessary to:
+* put *rf.pkl* and *graph_model_128.pt* files in the *App* directory (link for models above),
+* have all essential libraries (shared environment),
+* use command (from App directory) : `streamlit run app.py` . 
 
 ## Results
 
@@ -33,5 +62,7 @@ To run app place rf.pkl and graph_model_128.pt files in the App folder.
 
 ## App
 [![app_video](https://raw.githubusercontent.com/JamEwe/cardiotoxicity_prediction/master/images/app.png)](https://www.youtube.com/watch?v=AfpmEKPNqfM "Cardiotoxicity prediction app")
+
+
 
 
